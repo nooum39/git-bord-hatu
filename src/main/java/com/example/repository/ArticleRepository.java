@@ -14,7 +14,7 @@ import java.util.List;
 
 
 /**
- * 記事関連のリポジトリです..
+ * 記事関連のリポジトリです.
  *
  * @author haruka.yamaneki
  */
@@ -22,12 +22,12 @@ import java.util.List;
 @Repository
 public class ArticleRepository {
     private static final RowMapper<Article> ARTICLE_RESULT_SET_EXTRACTOR = (rs, i) -> {
-        Article separatedArticle = new Article();
-        separatedArticle.setId(rs.getInt("id"));
-        separatedArticle.setName(rs.getString("name"));
-        separatedArticle.setContent(rs.getString("content"));
-        separatedArticle.setCommentList(new ArrayList<>());
-        return separatedArticle;
+        Article Article = new Article();
+        Article.setId(rs.getInt("id"));
+        Article.setName(rs.getString("name"));
+        Article.setContent(rs.getString("content"));
+        Article.setCommentList(new ArrayList<>());
+        return Article;
     };
 
     @Autowired

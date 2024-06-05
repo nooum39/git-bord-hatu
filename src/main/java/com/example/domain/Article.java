@@ -3,14 +3,6 @@ package com.example.domain;
 import java.util.List;
 
 public class Article {
-
-    /**
-     * 記事情報を表すドメインクラス.
-     *
-     * @author haruka.yamaneki
-     */
-    public class SeparatedArticle {
-
         /**
          * 記事番号
          */ 
