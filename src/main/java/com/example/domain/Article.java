@@ -6,7 +6,6 @@ import java.util.List;
  * 記事テーブルに対応するエンティティ.
  */
 public class Article {
-
     /**
      * 記事番号
      */
@@ -65,5 +64,6 @@ public class Article {
                 + "]";
     }
 }
+
 
 
