@@ -13,7 +13,7 @@ public class Article {
 
         /**
          * 記事番号
-         */
+         */ 
         private Integer id;
 
         /**
