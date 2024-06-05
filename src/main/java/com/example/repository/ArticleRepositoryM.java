@@ -24,4 +24,12 @@ public class ArticleRepositoryM {
         a1.setContent("ccc");
         return articles;
     }
+
+    public void insert(Article article){
+
+    }
+
+    public void deleteById(Integer id){
+
+    }
 }
