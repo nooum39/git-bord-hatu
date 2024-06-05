@@ -1,5 +1,8 @@
 package com.example.domain;
 
+/**
+ * コメントテーブルに対応するエンティティ.
+ */
 public class Comment {
     /**
      * id
