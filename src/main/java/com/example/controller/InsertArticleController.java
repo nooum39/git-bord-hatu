@@ -4,7 +4,7 @@ package com.example.controller;
 import com.example.domain.Article;
 import com.example.form.ArticleForm;
 import com.example.form.CommentForm;
-import com.example.repository.ArticleRepositoryM;
+import com.example.repository.ArticleRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class InsertArticleController {
 
     @Autowired
-    private ArticleRepositoryM articleRepository;
+    private ArticleRepository articleRepository;
 
     /**
      * 記事投稿を受け付ける.

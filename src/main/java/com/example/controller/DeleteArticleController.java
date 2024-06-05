@@ -1,7 +1,7 @@
 package com.example.controller;
 
 
-import com.example.repository.ArticleRepositoryM;
+import com.example.repository.ArticleRepository;
 import jakarta.validation.constraints.PositiveOrZero;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class DeleteArticleController {
 
     @Autowired
-    private ArticleRepositoryM articleRepository;
+    private ArticleRepository articleRepository;
     /**
      * 指定したidの記事を削除する.
      *
