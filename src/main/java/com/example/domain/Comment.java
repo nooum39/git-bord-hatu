@@ -2,7 +2,7 @@ package com.example.domain;
 
 public class Comment {
     /**
-     * id.
+     * id
      */
     private Integer id;
 
