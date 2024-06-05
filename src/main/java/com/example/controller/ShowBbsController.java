@@ -2,7 +2,7 @@ package com.example.controller;
 
 import com.example.domain.Article;
 import com.example.form.ArticleForm;
-import com.example.repository.ArticleRepositoryM;
+import com.example.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +22,7 @@ public class ShowBbsController {
 
 
     @Autowired
-    private ArticleRepositoryM articleRepository;
+    private ArticleRepository articleRepository;
 
     /**
      * 掲示板を表示する.

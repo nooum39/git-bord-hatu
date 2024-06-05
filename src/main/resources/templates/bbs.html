@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th=“http://www.thymeleaf.org”>
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板</title>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+
+</head>
+<body>
+<h1>掲示板</h1>
+<form th:action="@{/bbs/insert-article}" method="post" th:object="${articleForm}">
+    <div th:errors="*{name}" style="color: red;"></div>
+    <div>
+        投稿者名: <input type="text" name="name" th:field="*{name}">
+    </div>
+    <div th:errors="*{content}" style="color: red;"></div>
+    <div>
+        投稿内容: 
+        <textarea name="content" id="" rows="5" th:field="*{content}"></textarea>
+    </div>
+    <div>
+        <button>投稿</button>
+    </div>
+<hr>
+</form>
+<div th:each="article : ${articles}">
+    <div>
+        投稿者名 : <span th:text="${article.name}"></span>
+    </div>
+    <div>
+        <div>投稿内容 : </div>
+        <h3 th:text="${article.content}"></h3>
+    </div>
+    <form th:action="@{/bbs/delete-article}" method="post" th:id="${'form'+article.id}">
+        <input type="hidden" th:value="${article.id}" name="articleId" class="articleId">
+        <button>記事削除</button>
+    </form>
+
+    <hr>
+    <div style="height: 30px;"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script th:src="@{/bbs.js}"></script>
+</body>
+</html>
