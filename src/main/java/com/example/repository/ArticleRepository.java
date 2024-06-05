@@ -22,12 +22,14 @@ import java.util.List;
 @Repository
 public class ArticleRepository {
     private static final RowMapper<Article> ARTICLE_RESULT_SET_EXTRACTOR = (rs, i) -> {
+
         Article Article = new Article();
         Article.setId(rs.getInt("id"));
         Article.setName(rs.getString("name"));
         Article.setContent(rs.getString("content"));
         Article.setCommentList(new ArrayList<>());
         return Article;
+
     };
 
     @Autowired
@@ -48,7 +50,8 @@ public class ArticleRepository {
     /**
      * 記事を追加するメソッド.
      *
-     * @param article  記事　
+
+     * @param article  記事
      */
     public void insert(Article article) {
         String sql = "INSERT INTO articles (name,content) VALUES(:name,:content);";
